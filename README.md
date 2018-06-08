@@ -49,3 +49,40 @@ You might see output like the following:
 
 OK, let's download the new links on the programming subreddit:
 
+    Import-Module .\get-subreddits.ps1
+    Get-Subreddit-New programming
+
+And now lets show the items in the programming subreddit:
+
+    Import-Module .\show-subreddit.ps1
+    Show-Subreddit -subreddit programming
+
+Example output:
+
+![](https://i.imgur.com/MUfjeX0.png)
+
+By default, links from the past two days will be shown. There's a `-days` parameter to control how many days are shown.
+
+Let's say you'd like to list the comments of a particular link:
+
+    Import-Module .\show-comments-console.ps1
+    Show-Comments-Console -name 't3_8oznig'
+
+![](https://i.imgur.com/2vucE8s.png)
+
+Open a link URL:
+
+    Import-Module .\open-link-url.ps1
+    open-link-url 't3_8oznig'
+
+A simple and experimental WPF link viewer:
+
+    Import-Module .\show-links-wpf.ps1
+    Show-Links-Wpf
+
+![](https://i.imgur.com/mFbG6kA.png)
+
+Click on the comments count to display a simple threaded comment viewer:
+
+![](https://i.imgur.com/DD9KPWT.png)
+
