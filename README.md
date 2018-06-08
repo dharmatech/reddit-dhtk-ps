@@ -52,6 +52,8 @@ OK, let's download the new links on the programming subreddit:
     Import-Module .\get-subreddits.ps1
     Get-Subreddit-New programming
 
+`Get-Subreddit-New` will retrieve the subreddit links and store them in the database.
+
 And now lets show the items in the programming subreddit:
 
     Import-Module .\show-subreddit.ps1
@@ -63,12 +65,16 @@ Example output:
 
 By default, links from the past two days will be shown. There's a `-days` parameter to control how many days are shown.
 
+`Show-Subreddit` is pulling data from the SQL Server database; it is not making any REST API calls.
+
 Let's say you'd like to list the comments of a particular link:
 
     Import-Module .\show-comments-console.ps1
     Show-Comments-Console -name 't3_8oznig'
 
 ![](https://i.imgur.com/2vucE8s.png)
+
+If `Show-Comments-Console` detects that the comments requested are not in the database, they will be downloaded and stored first. Future requests for those comments will come directly from the database.
 
 Open a link URL:
 
