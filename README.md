@@ -1,6 +1,6 @@
 # reddit-dhtk-ps
 
-PowerShell modules which download Reddit link and comment data, storing them them in SQL Server.
+PowerShell modules which download Reddit link and comment data, storing them them in SQL Server for later viewing, analysis, and processing.
 
 No account login required.
 
