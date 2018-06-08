@@ -86,3 +86,9 @@ Click on the comments count to display a simple threaded comment viewer:
 
 ![](https://i.imgur.com/DD9KPWT.png)
 
+Run a SQL query to search for links with "github" in the title:
+
+    Import-Module .\reddit-database.ps1
+    reddit-sql "SELECT * FROM links WHERE title LIKE '%github%'" | Select-Object created_utc, subreddit, title
+
+![](https://i.imgur.com/KzxOyMD.png)
