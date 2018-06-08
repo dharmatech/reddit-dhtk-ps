@@ -92,3 +92,10 @@ Run a SQL query to search for links with "github" in the title:
     reddit-sql "SELECT * FROM links WHERE title LIKE '%github%'" | Select-Object created_utc, subreddit, title
 
 ![](https://i.imgur.com/KzxOyMD.png)
+
+Show the count of links in the programming subreddit by day:
+
+    reddit-sql "SELECT * FROM links WHERE subreddit = 'programming'" | Group-Object { $_.created_utc.ToString('yyy-MM-dd') } | Select-Object Count, Name | Sort-Object Name
+
+![](https://i.imgur.com/HKQxWFS.png)
+
