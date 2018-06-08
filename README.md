@@ -4,7 +4,7 @@ PowerShell modules which download Reddit link and comment data, storing them the
 
 No account login required.
 
-# Pre-requisites
+# Prerequisites
 
 ## SQL Server
 
